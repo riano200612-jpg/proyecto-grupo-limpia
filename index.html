@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Grupo Limpia: Servicios profesionales de limpieza corporativa, post-obra, hoteles y restaurantes en Cartagena. Protocolos definidos, supervisión constante y cotización en menos de 24h." />
+    <meta name="description" content="Grupo Limpia: Services profesionales de limpieza corporativa, post-obra, hoteles y restaurantes en Cartagena. Protocolos definidos, supervisión constante y cotización en menos de 24h." />
     <meta name="keywords" content="limpieza corporativa Cartagena, aseo empresarial, limpieza post-obra, limpieza hoteles Cartagena, limpieza restaurantes, Grupo Limpia" />
     <meta name="author" content="Grupo Limpia" />
     <meta name="robots" content="index, follow" />
@@ -226,6 +226,7 @@
             background: var(--porcelain);
             box-shadow: 0 24px 80px rgba(33,73,90,.12);
         }
+        .line; }
         .section-dark { background: var(--porcelain); border-top: 1px solid var(--line); }
         .section-soft { background: var(--tile-blue-soft); border-top: 1px solid rgba(33,73,90,.1); }
         .section-contrast {
@@ -426,11 +427,11 @@
         </div>
     </nav>
 
-    <header class="relative h-[65svh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden px-3 sm:px-6 md:px-12 pb-8 sm:pb-12 md:pb-20" style="background-color: #ffffff;">
+    <header class="relative w-full aspect-video sm:aspect-auto sm:h-[65svh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden px-3 sm:px-6 md:px-12 pb-4 sm:pb-12 md:pb-20" style="background-color: #ffffff;">
         <video autoplay muted loop playsinline preload="auto"
                poster="assets/limpia-poster.jpg"
                aria-label="Video de fondo mostrando servicios de limpieza profesional"
-               class="absolute inset-0 w-full h-full object-cover object-center">
+               class="absolute inset-0 w-full h-full object-contain sm:object-cover object-center">
             <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type='video/mp4; codecs="avc1.42E01E"'>
             Tu navegador no soporta video HTML5.
         </video>
@@ -668,7 +669,7 @@
                 </div>
                 <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
                     <div class="flex items-center gap-3 mb-2 sm:mb-3">
-                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <span class="cta-check text-lg sm:text-xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
                         <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Horarios flexibles</h3>
                     </div>
                     <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Nos adaptamos a tu operación, incluyendo nocturnos y festivos.</p>
@@ -941,7 +942,7 @@
                     progressBar.style.width = progress + '%';
                     progressBar.setAttribute('aria-valuenow', Math.round(progress));
                     
-                    ticking = false;
+                    ticking = true;
                 });
                 ticking = true;
             }
@@ -991,7 +992,6 @@
             });
         }, { threshold: 0.25 });
 
-        // Observar solo videos con preload="auto" para autoplay
         document.querySelectorAll('video[preload="auto"]').forEach(video => {
             videoObserver.observe(video);
         });

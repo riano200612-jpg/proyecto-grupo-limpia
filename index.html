@@ -44,115 +44,6 @@
       gtag('config', 'G-XXXXXXX');
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "LocalBusiness",
-          "name": "Grupo Limpia",
-          "url": "https://grupolimpia.com/",
-          "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80",
-          "description": "Servicios profesionales de limpieza corporativa, post-obra, hoteles y restaurantes en Cartagena.",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Cartagena",
-            "addressRegion": "Bolívar",
-            "addressCountry": "CO"
-          },
-          "telephone": "+573001164218",
-          "priceRange": "$$",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Cartagena"
-          },
-          "sameAs": []
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "¿Atienden restaurantes en Cartagena?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. Realizamos desengrase técnico y limpieza profunda en cocinas y zonas de servicio, programando jornadas nocturnas o de baja operación para no interrumpir tu negocio."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Trabajan fines de semana o festivos?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sí. Ofrecemos horarios flexibles, incluyendo fines de semana y festivos, adaptándonos a la disponibilidad y necesidades operativas de tu empresa."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "¿Cuánto tarda una cotización?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Menos de 24 horas. Tras una breve inspección o diagnóstico remoto, enviamos una propuesta clara y detallada."
-              }
-            }
-          ]
-        },
-        {
-          "@type": "Service",
-          "serviceType": "Limpieza corporativa",
-          "provider": {
-            "@type": "LocalBusiness",
-            "name": "Grupo Limpia"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Cartagena"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Servicios de Limpieza",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Aseo corporativo y Oficinas"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Hoteles y Rentas Cortas"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Limpieza Post-Obra"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Cocinas y Restaurantes"
-                }
-              }
-            ]
-          }
-        }
-      ]
-    }
-    </script>
-
     <style>
         :root {
             --eco: #c8aa63;
@@ -347,7 +238,7 @@
         .section-dark .text-gray-300, .section-dark .text-gray-400,
         .section-soft .text-gray-300, .section-soft .text-gray-400,
         #contacto .text-gray-300, #contacto .text-gray-400 { color: var(--stone) !important; }
-        
+
         .bg-yellow-500\/10 { background-color: rgba(200,170,99,.11) !important; }
         .text-yellow-500 { color: var(--eco) !important; }
 
@@ -398,7 +289,7 @@
         .media-frame:hover .sound-toggle,
         .group:hover .sound-toggle,
         .video-card:hover .sound-toggle { opacity: 1; pointer-events: all; }
-        
+
         .sound-toggle:hover,
         .sound-toggle.is-on {
             color: var(--eco);
@@ -420,7 +311,7 @@
             background: #000;
         }
         .video-card video { width: 100%; height: 100%; object-fit: cover; }
-        
+
         @media (min-width: 640px) {
             .video-card { min-height: 300px; }
         }
@@ -470,10 +361,24 @@
             .service-card:hover { background: rgba(40,40,40,0.94); }
         }
 
+        @media (max-width: 1024px) {
+            #navbar { padding-left: 12px; padding-right: 12px; }
+            #nav-logo { font-size: 1rem; }
+            #nav-links { gap: 8px; font-size: 0.65rem; flex-wrap: wrap; justify-content: flex-end; }
+        }
+
         @media (max-width: 768px) {
-            #navbar { padding-left: 16px; padding-right: 16px; }
-            #nav-logo { font-size: 1.05rem; }
-            #nav-links { gap: 10px; font-size: 0.72rem; flex-wrap: wrap; justify-content: flex-end; }
+            #navbar { padding-left: 12px; padding-right: 12px; }
+            #navbar.scrolled { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+            #nav-logo { font-size: 0.9rem; letter-spacing: -0.02em; }
+            #nav-links { gap: 6px; font-size: 0.6rem; flex-wrap: wrap; justify-content: flex-end; }
+            .btn-premium { padding: 8px 12px !important; font-size: 0.65rem !important; }
+        }
+
+        @media (max-width: 480px) {
+            #navbar { padding-left: 10px; padding-right: 10px; }
+            #nav-logo { font-size: 0.85rem; }
+            #nav-links { gap: 4px; font-size: 0.55rem; }
         }
 
         @keyframes spin { to { transform: rotate(360deg); } }
@@ -490,7 +395,7 @@
             z-index: 0;
             pointer-events: none;
         }
-        
+
         @media (max-width: 640px) {
             .btn-premium { font-size: 0.75rem; }
         }
@@ -506,10 +411,11 @@
         <p>Grupo Limpia presta servicios de limpieza empresarial, limpieza de oficinas, hoteles, restaurantes, limpieza post obra y desinfección especializada en Cartagena de Indias y municipios cercanos.</p>
     </section>
 
-    <nav id="navbar" class="fixed top-0 w-full z-50 py-5 px-6 md:px-12 flex justify-center" aria-label="Navegación principal">
-        <div class="w-full max-w-7xl flex justify-between items-center gap-4">
-            <a href="#" id="nav-logo" class="text-2xl font-bold tracking-widest font-display" aria-label="Grupo Limpia - Inicio">
-                GRUPO <span style="color:var(--eco)">LIMPIA</span>
+    <nav id="navbar" class="fixed top-0 w-full z-50 py-4 md:py-5 px-4 sm:px-6 md:px-12 flex justify-center" aria-label="Navegación principal">
+        <div class="w-full max-w-7xl flex justify-between items-center gap-2 sm:gap-4">
+            <a href="#" id="nav-logo" class="text-lg sm:text-xl md:text-2xl font-bold tracking-widest font-display shrink-0" aria-label="Grupo Limpia - Inicio">
+                <span class="hidden sm:inline">GRUPO <span style="color:var(--eco)">LIMPIA</span></span>
+                <span class="sm:hidden">LIMPIA</span>
             </a>
             <div id="nav-links" class="flex gap-4 md:gap-9 text-[11px] sm:text-xs md:text-sm font-medium flex-wrap justify-end">
                 <a href="#promesa" class="nav-link transition">Nosotros</a>
@@ -520,87 +426,86 @@
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col items-center justify-end overflow-hidden px-4 sm:px-6 md:px-12 pb-12 sm:pb-16 md:pb-20" style="background-color: #ffffff;">
-        <video autoplay muted loop playsinline preload="auto" 
-               width="1920" height="1080"
+    <header class="relative h-[65svh] md:min-h-screen flex flex-col items-center justify-end overflow-hidden px-3 sm:px-6 md:px-12 pb-8 sm:pb-12 md:pb-20" style="background-color: #ffffff;">
+        <video autoplay muted loop playsinline preload="auto"
                poster="assets/limpia-poster.jpg"
                aria-label="Video de fondo mostrando servicios de limpieza profesional"
-               class="absolute inset-0 w-full h-full object-cover">
-            <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4; codecs=&quot;avc1.42E01E&quot;">
+               class="absolute inset-0 w-full h-full object-cover object-center">
+            <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type='video/mp4; codecs="avc1.42E01E"'>
             Tu navegador no soporta video HTML5.
         </video>
         <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0), rgba(255,255,255,0.35));"></div>
-        
+
         <div class="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center justify-end text-center">
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
-                <a href="#contacto" class="btn-premium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition text-center whitespace-nowrap" style="background: var(--deep-blue)">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center w-full px-2">
+                <a href="#contacto" class="btn-premium px-5 sm:px-8 py-2 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition text-center whitespace-nowrap w-full sm:w-auto" style="background: var(--deep-blue)">
                     Solicitar cotización
                 </a>
-                <a href="#servicios" class="btn-premium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition border border-white/20 backdrop-blur-md bg-white/10 hover:bg-white/20 text-center whitespace-nowrap" style="background: var(--deep-blue)">
+                <a href="#servicios" class="btn-premium px-5 sm:px-8 py-2 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition border border-white/20 backdrop-blur-md bg-white/10 hover:bg-white/20 text-center whitespace-nowrap w-full sm:w-auto" style="background: var(--deep-blue)">
                     Ver servicios
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-10 px-6 md:px-12 bg-[#eef5f7] border-b border-[rgba(33,73,90,0.1)] flex justify-center z-20 relative">
-        <div class="w-full max-w-6xl grid grid-cols-2 md:grid-cols-5 gap-6 text-center md:text-left">
-            <div class="pl-5 border-l border-yellow-600 reveal">
-                <p class="eyebrow">Cobertura</p>
-                <p class="text-sm text-gray-400 mt-2 font-light">Cartagena y área metropolitana</p>
+    <section class="py-6 sm:py-8 md:py-10 px-3 sm:px-6 md:px-12 bg-[#eef5f7] border-b border-[rgba(33,73,90,0.1)] flex justify-center z-20 relative">
+        <div class="w-full max-w-6xl grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 md:gap-6 text-center md:text-left">
+            <div class="pl-3 sm:pl-5 border-l border-yellow-600 reveal">
+                <p class="eyebrow text-xs sm:text-sm">Cobertura</p>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2 font-light">Cartagena y área metropolitana</p>
             </div>
-            <div class="pl-5 border-l border-yellow-600 reveal delay-1">
-                <p class="eyebrow">Enfoque</p>
-                <p class="text-sm text-gray-400 mt-2 font-light">100% Atención empresarial</p>
+            <div class="pl-3 sm:pl-5 border-l border-yellow-600 reveal delay-1">
+                <p class="eyebrow text-xs sm:text-sm">Enfoque</p>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2 font-light">100% Atención empresarial</p>
             </div>
-            <div class="pl-5 border-l border-yellow-600 reveal delay-2">
-                <p class="eyebrow">Respuesta</p>
-                <p class="text-sm text-gray-400 mt-2 font-light">Cotización en < 24 horas</p>
+            <div class="pl-3 sm:pl-5 border-l border-yellow-600 reveal delay-2">
+                <p class="eyebrow text-xs sm:text-sm">Respuesta</p>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2 font-light">Cotización en < 24 horas</p>
             </div>
-            <div class="pl-5 border-l border-yellow-600 reveal delay-3">
-                <p class="eyebrow">Estándar</p>
-                <p class="text-sm text-gray-400 mt-2 font-light">Protocolos profesionales</p>
+            <div class="pl-3 sm:pl-5 border-l border-yellow-600 reveal delay-3">
+                <p class="eyebrow text-xs sm:text-sm">Estándar</p>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2 font-light">Protocolos profesionales</p>
             </div>
-            <div class="pl-5 border-l border-yellow-600 reveal delay-4 hidden md:block">
-                <p class="eyebrow">Horarios</p>
-                <p class="text-sm text-gray-400 mt-2 font-light">Flexibles y nocturnos</p>
+            <div class="pl-3 sm:pl-5 border-l border-yellow-600 reveal delay-4 hidden md:block">
+                <p class="eyebrow text-xs sm:text-sm">Horarios</p>
+                <p class="text-xs sm:text-sm text-gray-400 mt-1 sm:mt-2 font-light">Flexibles y nocturnos</p>
             </div>
         </div>
     </section>
 
-    <section id="promesa" class="py-20 px-6 md:px-12 bg-[#f7f8f5] border-b border-[rgba(33,73,90,0.1)] flex justify-center">
+    <section id="promesa" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 bg-[#f7f8f5] border-b border-[rgba(33,73,90,0.1)] flex justify-center">
         <div class="w-full max-w-6xl">
-            <div class="text-center mb-16 reveal">
-                <span class="eyebrow mb-3 block">Nuestra Promesa</span>
-                <h2 class="font-display text-4xl md:text-5xl text-[var(--ink)] font-light leading-tight">Más que limpieza, <br><span style="color:var(--eco)">tranquilidad operativa</span></h2>
+            <div class="text-center mb-10 sm:mb-12 md:mb-16 reveal">
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Nuestra Promesa</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light leading-tight">Más que limpieza, <br><span style="color:var(--eco)">tranquilidad operativa</span></h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="service-card p-8 reveal text-center md:text-left">
-                    <i class="fas fa-clock text-2xl mb-4 text-yellow-500" aria-hidden="true"></i>
-                    <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Puntualidad absoluta</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">Llegamos a la hora acordada. Tu operación no puede esperar, y nosotros lo sabemos.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
+                <div class="service-card p-5 sm:p-6 md:p-8 reveal text-center md:text-left">
+                    <i class="fas fa-clock text-xl sm:text-2xl mb-3 sm:mb-4 text-yellow-500" aria-hidden="true"></i>
+                    <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Puntualidad absoluta</h3>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">Llegamos a la hora acordada. Tu operación no puede esperar, y nosotros lo sabemos.</p>
                 </div>
-                <div class="service-card p-8 reveal text-center md:text-left">
-                    <i class="fas fa-clipboard-check text-2xl mb-4 text-yellow-500" aria-hidden="true"></i>
-                    <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Supervisión constante</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">Cada servicio es revisado bajo una lista de chequeo antes de darlo por terminado.</p>
+                <div class="service-card p-5 sm:p-6 md:p-8 reveal text-center md:text-left">
+                    <i class="fas fa-clipboard-check text-xl sm:text-2xl mb-3 sm:mb-4 text-yellow-500" aria-hidden="true"></i>
+                    <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Supervisión constante</h3>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">Cada servicio es revisado bajo una lista de chequeo antes de darlo por terminado.</p>
                 </div>
-                <div class="service-card p-8 reveal text-center md:text-left">
-                    <i class="fas fa-comments text-2xl mb-4 text-yellow-500" aria-hidden="true"></i>
-                    <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Respuesta inmediata</h3>
-                    <p class="text-gray-400 leading-relaxed font-light">Atendemos tus solicitudes y dudas por WhatsApp en minutos, no en días.</p>
+                <div class="service-card p-5 sm:p-6 md:p-8 reveal text-center md:text-left">
+                    <i class="fas fa-comments text-xl sm:text-2xl mb-3 sm:mb-4 text-yellow-500" aria-hidden="true"></i>
+                    <h3 class="text-lg sm:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Respuesta inmediata</h3>
+                    <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light">Atendemos tus solicitudes y dudas por WhatsApp en minutos, no en días.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="company-intro py-20 px-6 md:px-12 flex justify-center">
+    <section class="company-intro py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 flex justify-center">
         <div class="w-full max-w-4xl text-center reveal">
-            <span class="eyebrow mb-4 block">Sobre nosotros</span>
-            <h2 class="font-display text-4xl md:text-5xl text-[var(--ink)] font-light leading-tight mb-8">
+            <span class="eyebrow mb-2 sm:mb-3 md:mb-4 block text-xs sm:text-sm">Sobre nosotros</span>
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light leading-tight mb-6 sm:mb-8">
                 Una empresa nueva con <br><span style="color:var(--eco)">una visión clara</span>
             </h2>
-            <div class="max-w-3xl mx-auto space-y-5 text-gray-500 font-light leading-relaxed text-base md:text-lg">
+            <div class="max-w-3xl mx-auto space-y-3 sm:space-y-4 md:space-y-5 text-gray-500 font-light leading-relaxed text-sm sm:text-base md:text-lg">
                 <p>Grupo Limpia nace en Cartagena con el propósito de ofrecer servicios corporativos de limpieza con procesos definidos, comunicación rápida y atención personalizada.</p>
                 <p>Estamos construyendo relaciones de largo plazo basadas en cumplimiento, transparencia y resultados.</p>
             </div>
@@ -608,103 +513,103 @@
         </div>
     </section>
 
-    <section id="proceso" class="py-20 px-6 md:px-12 section-contrast flex justify-center">
+    <section id="proceso" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-contrast flex justify-center">
         <div class="w-full max-w-6xl">
-            <div class="text-center mb-16 reveal">
-                <span class="eyebrow mb-3 block">Metodología</span>
-                <h2 class="font-display text-4xl md:text-5xl text-white font-light leading-tight">Cómo trabajamos</h2>
+            <div class="text-center mb-10 sm:mb-12 md:mb-16 reveal">
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Metodología</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-light leading-tight">Cómo trabajamos</h2>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center reveal">
-                <div class="p-4">
-                    <span class="text-4xl font-display font-light opacity-30">01</span>
-                    <h4 class="text-white font-medium mt-3">Inspección</h4>
-                    <p class="text-gray-400 text-sm mt-2 font-light">Evaluación del espacio y necesidades.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-6 text-center reveal">
+                <div class="p-2 sm:p-3 md:p-4">
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-display font-light opacity-30">01</span>
+                    <h4 class="text-white font-medium mt-2 sm:mt-3 text-sm sm:text-base">Inspección</h4>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1 sm:mt-2 font-light">Evaluación del espacio y necesidades.</p>
                 </div>
-                <div class="p-4">
-                    <span class="text-4xl font-display font-light opacity-30">02</span>
-                    <h4 class="text-white font-medium mt-3">Diagnóstico</h4>
-                    <p class="text-gray-400 text-sm mt-2 font-light">Identificación de puntos críticos.</p>
+                <div class="p-2 sm:p-3 md:p-4">
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-display font-light opacity-30">02</span>
+                    <h4 class="text-white font-medium mt-2 sm:mt-3 text-sm sm:text-base">Diagnóstico</h4>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1 sm:mt-2 font-light">Identificación de puntos críticos.</p>
                 </div>
-                <div class="p-4">
-                    <span class="text-4xl font-display font-light opacity-30">03</span>
-                    <h4 class="text-white font-medium mt-3">Propuesta</h4>
-                    <p class="text-gray-400 text-sm mt-2 font-light">Cotización clara en menos de 24h.</p>
+                <div class="p-2 sm:p-3 md:p-4">
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-display font-light opacity-30">03</span>
+                    <h4 class="text-white font-medium mt-2 sm:mt-3 text-sm sm:text-base">Propuesta</h4>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1 sm:mt-2 font-light">Cotización clara en menos de 24h.</p>
                 </div>
-                <div class="p-4">
-                    <span class="text-4xl font-display font-light opacity-30">04</span>
-                    <h4 class="text-white font-medium mt-3">Ejecución</h4>
-                    <p class="text-gray-400 text-sm mt-2 font-light">Limpieza con protocolos definidos.</p>
+                <div class="p-2 sm:p-3 md:p-4">
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-display font-light opacity-30">04</span>
+                    <h4 class="text-white font-medium mt-2 sm:mt-3 text-sm sm:text-base">Ejecución</h4>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1 sm:mt-2 font-light">Limpieza con protocolos definidos.</p>
                 </div>
-                <div class="p-4 col-span-2 md:col-span-1">
-                    <span class="text-4xl font-display font-light opacity-30">05</span>
-                    <h4 class="text-white font-medium mt-3">Seguimiento</h4>
-                    <p class="text-gray-400 text-sm mt-2 font-light">Garantía de satisfacción continua.</p>
+                <div class="p-2 sm:p-3 md:p-4 col-span-2 md:col-span-3 lg:col-span-1">
+                    <span class="text-2xl sm:text-3xl md:text-4xl font-display font-light opacity-30">05</span>
+                    <h4 class="text-white font-medium mt-2 sm:mt-3 text-sm sm:text-base">Seguimiento</h4>
+                    <p class="text-gray-400 text-xs sm:text-sm mt-1 sm:mt-2 font-light">Garantía de satisfacción continua.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="py-20 px-6 md:px-12 section-dark flex justify-center">
+    <section id="servicios" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-dark flex justify-center">
         <div class="w-full max-w-6xl">
-            <div class="max-w-2xl mb-14 reveal">
-                <span class="eyebrow mb-3 block">Servicios Especializados</span>
-                <h2 class="font-display text-5xl text-[var(--ink)] font-light leading-tight">Soluciones precisas, <br>sin exceso operativo</h2>
-                <div class="hairline mt-7"></div>
+            <div class="max-w-2xl mb-10 sm:mb-12 md:mb-14 reveal">
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Servicios Especializados</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light leading-tight">Soluciones precisas, <br>sin exceso operativo</h2>
+                <div class="hairline mt-5 sm:mt-7"></div>
             </div>
-            <div class="grid md:grid-cols-2 gap-4">
-                <div id="limpieza-oficinas-cartagena" class="service-card p-8 reveal flex gap-6 items-start">
-                    <div class="bg-yellow-500/10 w-11 h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
-                        <i class="fas fa-building text-lg text-yellow-500"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+                <div id="limpieza-oficinas-cartagena" class="service-card p-5 sm:p-6 md:p-8 reveal flex gap-4 sm:gap-6 items-start">
+                    <div class="bg-yellow-500/10 w-9 sm:w-11 h-9 sm:h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-building text-base sm:text-lg text-yellow-500"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Aseo corporativo y Oficinas</h3>
-                        <p class="text-gray-400 leading-relaxed font-light mb-4">Recepciones, salas de ventas y zonas comunes con rutinas limpias, discretas y que protegen tu imagen de marca.</p>
-                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20aseo%20de%20oficinas%20corporativas." target="_blank" rel="noopener noreferrer" class="text-sm font-semibold hover:underline" style="color:var(--eco)">Cotizar oficinas →</a>
-                    </div>
-                </div>
-
-                <div id="limpieza-hoteles-cartagena" class="service-card p-8 reveal flex gap-6 items-start">
-                    <div class="bg-yellow-500/10 w-11 h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
-                        <i class="fas fa-hotel text-lg text-yellow-500"></i>
-                    </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Hoteles y Rentas Cortas</h3>
-                        <p class="text-gray-400 leading-relaxed font-light mb-4">Habitaciones, apartamentos turísticos (Airbnb) y áreas de tránsito con el más alto estándar de hospitalidad.</p>
-                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20de%20hotel%20o%20renta%20corta." target="_blank" rel="noopener noreferrer" class="text-sm font-semibold hover:underline" style="color:var(--eco)">Cotizar hoteles →</a>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg md:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Aseo corporativo y Oficinas</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light mb-3 sm:mb-4">Recepciones, salas de ventas y zonas comunes con rutinas limpias, discretas y que protegen tu imagen de marca.</p>
+                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20aseo%20de%20oficinas%20corporativas." target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold hover:underline inline-block" style="color:var(--eco)">Cotizar oficinas →</a>
                     </div>
                 </div>
 
-                <div id="limpieza-post-obra-cartagena" class="service-card p-8 reveal flex gap-6 items-start">
-                    <div class="bg-yellow-500/10 w-11 h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
-                        <i class="fas fa-hard-hat text-lg text-yellow-500"></i>
+                <div id="limpieza-hoteles-cartagena" class="service-card p-5 sm:p-6 md:p-8 reveal flex gap-4 sm:gap-6 items-start">
+                    <div class="bg-yellow-500/10 w-9 sm:w-11 h-9 sm:h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-hotel text-base sm:text-lg text-yellow-500"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Limpieza Post-Obra</h3>
-                        <p class="text-gray-400 leading-relaxed font-light mb-4">Retiro de polvo fino, residuos de pintura, cemento y manchas para entregas inmobiliarias impecables.</p>
-                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20post-obra." target="_blank" rel="noopener noreferrer" class="text-sm font-semibold hover:underline" style="color:var(--eco)">Cotizar post-obra →</a>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg md:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Hoteles y Rentas Cortas</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light mb-3 sm:mb-4">Habitaciones, apartamentos turísticos (Airbnb) y áreas de tránsito con el más alto estándar de hospitalidad.</p>
+                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20de%20hotel%20o%20renta%20corta." target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold hover:underline inline-block" style="color:var(--eco)">Cotizar hoteles →</a>
                     </div>
                 </div>
 
-                <div id="limpieza-restaurantes-cartagena" class="service-card p-8 reveal flex gap-6 items-start">
-                    <div class="bg-yellow-500/10 w-11 h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
-                        <i class="fas fa-kitchen-set text-lg text-yellow-500"></i>
+                <div id="limpieza-post-obra-cartagena" class="service-card p-5 sm:p-6 md:p-8 reveal flex gap-4 sm:gap-6 items-start">
+                    <div class="bg-yellow-500/10 w-9 sm:w-11 h-9 sm:h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-hard-hat text-base sm:text-lg text-yellow-500"></i>
                     </div>
-                    <div class="flex-1">
-                        <h3 class="text-xl font-medium mb-3 text-[var(--ink)]">Cocinas y Restaurantes</h3>
-                        <p class="text-gray-400 leading-relaxed font-light mb-4">Desengrase técnico de áreas críticas en horarios nocturnos o de baja operación, sin detener tu negocio.</p>
-                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20de%20restaurante%20o%20cocina." target="_blank" rel="noopener noreferrer" class="text-sm font-semibold hover:underline" style="color:var(--eco)">Cotizar restaurante →</a>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg md:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Limpieza Post-Obra</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light mb-3 sm:mb-4">Retiro de polvo fino, residuos de pintura, cemento y manchas para entregas inmobiliarias impecables.</p>
+                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20post-obra." target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold hover:underline inline-block" style="color:var(--eco)">Cotizar post-obra →</a>
+                    </div>
+                </div>
+
+                <div id="limpieza-restaurantes-cartagena" class="service-card p-5 sm:p-6 md:p-8 reveal flex gap-4 sm:gap-6 items-start">
+                    <div class="bg-yellow-500/10 w-9 sm:w-11 h-9 sm:h-11 rounded-full flex items-center justify-center shrink-0" aria-hidden="true">
+                        <i class="fas fa-kitchen-set text-base sm:text-lg text-yellow-500"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="text-base sm:text-lg md:text-xl font-medium mb-2 sm:mb-3 text-[var(--ink)]">Cocinas y Restaurantes</h3>
+                        <p class="text-xs sm:text-sm text-gray-400 leading-relaxed font-light mb-3 sm:mb-4">Desengrase técnico de áreas críticas en horarios nocturnos o de baja operación, sin detener tu negocio.</p>
+                        <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20limpieza%20de%20restaurante%20o%20cocina." target="_blank" rel="noopener noreferrer" class="text-xs sm:text-sm font-semibold hover:underline inline-block" style="color:var(--eco)">Cotizar restaurante →</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 md:px-12 bg-[#f7f8f5] flex justify-center">
+    <section class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 bg-[#f7f8f5] flex justify-center">
         <div class="w-full max-w-6xl">
-            <div class="text-center mb-12 reveal">
-                <span class="eyebrow mb-3 block">Nuestro estándar</span>
-                <h2 class="font-display text-4xl md:text-5xl text-[var(--ink)] font-light leading-tight">Estándares de presentación <br><span style="color:var(--eco)">que buscamos alcanzar</span></h2>
-                <p class="text-gray-500 mt-5 max-w-2xl mx-auto font-light text-base md:text-lg">
+            <div class="text-center mb-10 sm:mb-12 reveal">
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Nuestro estándar</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light leading-tight">Estándares de presentación <br><span style="color:var(--eco)">que buscamos alcanzar</span></h2>
+                <p class="text-gray-500 mt-3 sm:mt-4 md:mt-5 max-w-2xl mx-auto font-light text-xs sm:text-sm md:text-base lg:text-lg">
                     Estas imágenes representan el nivel de calidad y acabado que entregamos en cada intervención.
                 </p>
             </div>
@@ -712,9 +617,8 @@
                 <div class="service-card p-4">
                     <div class="video-card group relative">
                         <video id="video-estandar-1" muted loop playsinline preload="auto" 
-                               width="600" height="300"
                                poster="assets/video-hogar-poster.jpg"
-                               class="w-full h-full object-cover"
+                               class="w-full h-full object-cover object-center"
                                aria-label="Video mostrando estándar de calidad en limpieza de hogares">
                             <source src="assets/imagenes/VIDEO_HOGAR_FELIZ.mp4" type="video/mp4">
                             Tu navegador no soporta video HTML5.
@@ -730,9 +634,8 @@
                 <div class="service-card p-4">
                     <div class="video-card group relative">
                         <video id="video-estandar-2" muted loop playsinline preload="auto" 
-                               width="600" height="300"
                                poster="assets/video-cocina-poster.jpg"
-                               class="w-full h-full object-cover"
+                               class="w-full h-full object-cover object-center"
                                aria-label="Video mostrando desengrase y limpieza profunda en cocina comercial">
                             <source src="assets/imagenes/VIDEO_COCINA_INDUSTRIAL.mp4" type="video/mp4">
                             Tu navegador no soporta video HTML5.
@@ -749,79 +652,78 @@
         </div>
     </section>
 
-    <section class="py-20 px-6 md:px-12 section-soft flex justify-center">
+    <section class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-soft flex justify-center">
         <div class="w-full max-w-5xl">
-            <div class="text-center mb-14 reveal">
-                <span class="eyebrow mb-3 block">Garantías</span>
-                <h2 class="font-display text-4xl md:text-5xl text-[var(--ink)] font-light leading-tight">Nuestros compromisos</h2>
+            <div class="text-center mb-10 sm:mb-12 md:mb-14 reveal">
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Garantías</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light leading-tight">Nuestros compromisos</h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Respuesta en menos de 24 horas</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 reveal">
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Respuesta en menos de 24 horas</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Recibirás tu cotización detallada en tiempo récord.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Recibirás tu cotización detallada en tiempo récord.</p>
                 </div>
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Horarios flexibles</h3>
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Horarios flexibles</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Nos adaptamos a tu operación, incluyendo nocturnos y festivos.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Nos adaptamos a tu operación, incluyendo nocturnos y festivos.</p>
                 </div>
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Supervisión del servicio</h3>
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Supervisión del servicio</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Cada trabajo es revisado antes de darlo por terminado.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Cada trabajo es revisado antes de darlo por terminado.</p>
                 </div>
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Comunicación directa</h3>
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Comunicación directa</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">WhatsApp directo, sin intermediarios ni demoras.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">WhatsApp directo, sin intermediarios ni demoras.</p>
                 </div>
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Cotización sin costo</h3>
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Cotización sin costo</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Evaluación y propuesta inicial completamente gratuitas.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Evaluación y propuesta inicial completamente gratuitas.</p>
                 </div>
-                <div class="service-card p-7 text-center md:text-left">
-                    <div class="flex items-center gap-3 mb-3">
-                        <span class="cta-check text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                        <h3 class="text-lg font-medium text-[var(--ink)]">Protocolos definidos</h3>
+                <div class="service-card p-5 sm:p-6 md:p-7 text-center md:text-left">
+                    <div class="flex items-center gap-3 mb-2 sm:mb-3">
+                        <span class="cta-check text-lg sm:text-2xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                        <h3 class="text-sm sm:text-base md:text-lg font-medium text-[var(--ink)]">Protocolos definidos</h3>
                     </div>
-                    <p class="text-gray-400 font-light text-sm leading-relaxed">Procesos claros, consistentes y repetibles en cada visita.</p>
+                    <p class="text-gray-400 font-light text-xs sm:text-sm leading-relaxed">Procesos claros, consistentes y repetibles en cada visita.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="video-promocional" class="py-20 px-6 md:px-12 section-contrast flex justify-center">
+    <section id="video-promocional" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-contrast flex justify-center">
         <div class="w-full max-w-5xl text-center">
-            <div class="reveal mb-4">
-                <span class="eyebrow">Galería operativa</span>
+            <div class="reveal mb-3 sm:mb-4">
+                <span class="eyebrow text-xs sm:text-sm">Galería operativa</span>
             </div>
             
-            <h2 class="font-display text-3xl md:text-4xl font-light mb-3 text-white/90 reveal">
+            <h2 class="font-display text-2xl sm:text-3xl md:text-4xl font-light mb-2 sm:mb-3 text-white/90 reveal">
                 Espacios impecables
             </h2>
-            <p class="text-white/60 text-sm md:text-base font-light mb-10 reveal tracking-wide">
+            <p class="text-white/60 text-xs sm:text-sm md:text-base font-light mb-8 sm:mb-10 reveal tracking-wide">
                 para empresas exigentes
             </p>
 
             <div class="media-frame reveal group relative aspect-video max-w-4xl mx-auto overflow-hidden shadow-2xl">
                 <video id="main-comercial" muted loop playsinline preload="auto" 
-                       width="1920" height="1080"
                        poster="assets/video-corporativo-poster.jpg"
-                       class="w-full h-full object-cover"
+                       class="w-full h-full object-cover object-center"
                        aria-label="Video promocional mostrando espacios limpios y profesionales">
-                    <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4; codecs=&quot;avc1.42E01E&quot;">
+                    <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type='video/mp4; codecs="avc1.42E01E"'>
                     Tu navegador no soporta video HTML5.
                 </video>
 
@@ -833,26 +735,26 @@
             </div>
 
             <div class="mt-8 sm:mt-12 reveal flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center flex-wrap">
-                <a href="#contacto" class="btn-premium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition text-center border border-white/20 hover:bg-white/10 whitespace-nowrap" style="background: var(--deep-blue)">
+                <a href="#contacto" class="btn-premium px-5 sm:px-8 py-2 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition text-center border border-white/20 hover:bg-white/10 whitespace-nowrap w-full sm:w-auto" style="background: var(--deep-blue)">
                     Solicitar cotización
                 </a>
-                <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20mi%20espacio." target="_blank" rel="noopener noreferrer" class="btn-premium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition border border-white/20 hover:bg-white/10 text-center flex items-center gap-2 whitespace-nowrap" style="background: var(--deep-blue)">
+                <a href="https://wa.me/573001164218?text=Hola,%20necesito%20una%20cotización%20para%20mi%20espacio." target="_blank" rel="noopener noreferrer" class="btn-premium px-5 sm:px-8 py-2 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition border border-white/20 hover:bg-white/10 text-center flex items-center gap-2 whitespace-nowrap w-full sm:w-auto justify-center" style="background: var(--deep-blue)">
                     <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     <span>WhatsApp directo</span>
                 </a>
             </div>
             
-            <p class="mt-6 text-white/50 font-light text-xs reveal">
+            <p class="mt-4 sm:mt-6 text-white/50 font-light text-xs reveal">
                 Respuesta garantizada en menos de 24 horas
             </p>
         </div>
     </section>
 
-    <section id="faq" class="py-20 px-6 md:px-12 section-soft flex justify-center">
+    <section id="faq" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-soft flex justify-center">
         <div class="w-full max-w-3xl">
-            <div class="text-center mb-12 reveal">
-                <span class="eyebrow">Preguntas Frecuentes</span>
-                <h2 class="font-display text-5xl text-[var(--ink)] font-light mt-3">Resolvemos tus dudas</h2>
+            <div class="text-center mb-10 sm:mb-12 reveal">
+                <span class="eyebrow text-xs sm:text-sm">Preguntas Frecuentes</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] font-light mt-2 sm:mt-3">Resolvemos tus dudas</h2>
             </div>
 
             <div class="faq-item reveal" role="region" aria-labelledby="faq-1-btn">
@@ -897,32 +799,32 @@
         </div>
     </section>
 
-    <section class="cta-banner py-16 md:py-20 px-6 md:px-12 flex justify-center">
+    <section class="cta-banner py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 flex justify-center">
         <div class="w-full max-w-5xl">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
                 <div class="reveal">
-                    <span class="eyebrow mb-3 block" style="color: var(--eco);">¿Listo para empezar?</span>
-                    <h2 class="font-display text-4xl md:text-5xl text-white font-light leading-tight">
+                    <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm" style="color: var(--eco);">¿Listo para empezar?</span>
+                    <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white font-light leading-tight">
                         ¿Necesitas una <br><span style="color:var(--eco)">cotización hoy?</span>
                     </h2>
-                    <div class="mt-6 space-y-3">
+                    <div class="mt-4 sm:mt-6 space-y-2 sm:space-y-3">
                         <div class="flex items-center gap-3">
-                            <span class="cta-check" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-white/85 font-light">Respuesta en menos de 24 horas</span>
+                            <span class="cta-check text-lg sm:text-xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-white/85 font-light text-sm sm:text-base">Respuesta en menos de 24 horas</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="cta-check" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-white/85 font-light">Atención empresarial</span>
+                            <span class="cta-check text-lg sm:text-xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-white/85 font-light text-sm sm:text-base">Atención empresarial</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <span class="cta-check" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
-                            <span class="text-white/85 font-light">Horarios flexibles</span>
+                            <span class="cta-check text-lg sm:text-xl" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
+                            <span class="text-white/85 font-light text-sm sm:text-base">Horarios flexibles</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal flex flex-col items-center md:items-end gap-4 w-full">
-                    <a href="#contacto" class="inline-block px-8 sm:px-10 py-3 sm:py-4 rounded-full text-black font-bold text-sm sm:text-base transition hover:opacity-90 hover:scale-105 text-center shadow-2xl w-full sm:w-auto" style="background: var(--eco); box-shadow: 0 20px 50px rgba(200,170,99,0.35);">
+                    <a href="#contacto" class="inline-block px-6 sm:px-10 py-2.5 sm:py-3 md:py-4 rounded-full text-black font-bold text-xs sm:text-sm md:text-base transition hover:opacity-90 hover:scale-105 text-center shadow-2xl w-full sm:w-auto" style="background: var(--eco); box-shadow: 0 20px 50px rgba(200,170,99,0.35);">
                         Solicitar Cotización
                     </a>
                     <p class="text-white/60 text-xs sm:text-sm font-light">
@@ -937,33 +839,33 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-20 px-6 md:px-12 section-dark flex justify-center">
-        <div class="w-full max-w-6xl grid md:grid-cols-2 gap-16 items-start">
+    <section id="contacto" class="py-12 sm:py-16 md:py-20 px-3 sm:px-6 md:px-12 section-dark flex justify-center">
+        <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-start">
             <div class="reveal">
-                <span class="eyebrow mb-3 block">Contacto</span>
-                <h2 class="font-display text-5xl text-[var(--ink)] leading-tight font-light">Cotiza tu servicio</h2>
-                <p class="text-gray-400 mt-5 font-light mb-8 leading-relaxed">Cuéntanos el tipo de espacio, horario y frecuencia. Te contactaremos con una propuesta clara en menos de 24 horas.</p>
+                <span class="eyebrow mb-2 sm:mb-3 block text-xs sm:text-sm">Contacto</span>
+                <h2 class="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--ink)] leading-tight font-light">Cotiza tu servicio</h2>
+                <p class="text-gray-400 mt-4 sm:mt-5 font-light mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">Cuéntanos el tipo de espacio, horario y frecuencia. Te contactaremos con una propuesta clara en menos de 24 horas.</p>
 
-                <form id="contact-form" class="space-y-5" novalidate>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <form id="contact-form" class="space-y-4 sm:space-y-5" novalidate>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
                         <div>
-                            <input id="f-name" type="text" placeholder="Tu nombre o empresa" class="form-input" required aria-required="true" aria-describedby="name-error" />
+                            <input id="f-name" type="text" placeholder="Tu nombre o empresa" class="form-input text-sm sm:text-base" required aria-required="true" aria-describedby="name-error" />
                             <div id="name-error" class="error-message" role="alert">
                                 <i class="fas fa-exclamation-circle"></i>
-                                <span>Por favor, ingresa tu nombre</span>
+                                <span class="text-xs sm:text-sm">Por favor, ingresa tu nombre</span>
                             </div>
                         </div>
                         <div>
-                            <input id="f-phone" type="tel" placeholder="WhatsApp (ej: 3001234567)" class="form-input" required aria-required="true" aria-describedby="phone-error" />
+                            <input id="f-phone" type="tel" placeholder="WhatsApp (ej: 3001234567)" class="form-input text-sm sm:text-base" required aria-required="true" aria-describedby="phone-error" />
                             <div id="phone-error" class="error-message" role="alert">
                                 <i class="fas fa-exclamation-circle"></i>
-                                <span>Ingresa un número válido (10 dígitos)</span>
+                                <span class="text-xs sm:text-sm">Ingresa un número válido (10 dígitos)</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="relative">
-                        <select id="f-service" class="form-select text-gray-500" required aria-required="true" aria-describedby="service-error">
+                        <select id="f-service" class="form-select text-gray-500 text-sm sm:text-base" required aria-required="true" aria-describedby="service-error">
                             <option value="" disabled selected>¿Qué servicio necesitas?</option>
                             <option value="Aseo Corporativo / Oficinas">Aseo corporativo / Oficinas</option>
                             <option value="Restaurantes / Cocinas">Restaurantes / Cocinas</option>
@@ -977,27 +879,27 @@
                         </div>
                         <div id="service-error" class="error-message" role="alert">
                             <i class="fas fa-exclamation-circle"></i>
-                            <span>Selecciona un servicio</span>
+                            <span class="text-xs sm:text-sm">Selecciona un servicio</span>
                         </div>
                     </div>
 
                     <div>
-                        <textarea id="f-message" rows="4" placeholder="Cuéntanos más: tipo de empresa, metraje aproximado, frecuencia deseada y necesidades específicas..." class="form-input resize-none" required aria-required="true" aria-describedby="message-error"></textarea>
+                        <textarea id="f-message" rows="4" placeholder="Cuéntanos más: tipo de empresa, metraje aproximado, frecuencia deseada y necesidades específicas..." class="form-input resize-none text-sm sm:text-base" required aria-required="true" aria-describedby="message-error"></textarea>
                         <div id="message-error" class="error-message" role="alert">
                             <i class="fas fa-exclamation-circle"></i>
-                            <span>Por favor, describe tu necesidad</span>
+                            <span class="text-xs sm:text-sm">Por favor, describe tu necesidad</span>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn-submit w-full py-3 sm:py-4 rounded-full text-black font-bold transition hover:opacity-90 flex items-center justify-center gap-2 text-xs sm:text-sm" style="background:var(--eco)">
+                    <button type="submit" class="btn-submit w-full py-2.5 sm:py-3 md:py-4 rounded-full text-black font-bold transition hover:opacity-90 flex items-center justify-center gap-2 text-xs sm:text-sm" style="background:var(--eco)">
                         <i class="fab fa-whatsapp text-lg spinner" aria-hidden="true"></i>
                         <span class="btn-text"><i class="fab fa-whatsapp text-lg" aria-hidden="true"></i> Enviar por WhatsApp</span>
                     </button>
                 </form>
             </div>
 
-            <div class="media-frame relative h-full min-h-[450px] reveal">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125552.12876878954!2d-75.56565158671442!3d10.400196885627267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625e1fc5a95f5%3A0xc6fb0e462eddaeeb!2sCartagena%2C%20Cartagena%20Province%2C%20Bolivar%2C%20Colombia!5e0!3m2!1sen!2sus!4v1718742562208!5m2!1sen!2sus" 
+            <div class="media-frame relative h-full min-h-[300px] sm:min-h-[400px] md:min-h-[450px] reveal">
+                <iframe src="https://www.google.com/maps/embed?pb=\!1m18\!1m12\!1m3\!1d125552.12876878954\!2d-75.56565158671442\!3d10.400196885627267\!2m3\!1f0\!2f0\!3f0\!3m2\!1i1024\!2i768\!4f13.1\!3m3\!1m2\!1s0x8ef625e1fc5a95f5%3A0xc6fb0e462eddaeeb\!2sCartagena%2C%20Cartagena%20Province%2C%20Bolivar%2C%20Colombia\!5e0\!3m2\!1sen\!2sus\!4v1718742562208\!5m2\!1sen\!2sus" 
                         width="100%" height="100%" 
                         style="border:0; min-height: 450px;" 
                         allowfullscreen="" 
@@ -1013,8 +915,8 @@
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-500 text-sm border-t border-[rgba(33,73,90,0.1)]" style="background: var(--porcelain);">
-        <p class="mb-2">© 2026 Grupo Limpia · Limpieza corporativa, post-obra, hoteles y restaurantes en Cartagena.</p>
+    <footer class="py-8 sm:py-10 md:py-12 text-center text-gray-500 text-xs sm:text-sm border-t border-[rgba(33,73,90,0.1)]" style="background: var(--porcelain);">
+        <p class="mb-1 sm:mb-2">© 2026 Grupo Limpia · Limpieza corporativa, post-obra, hoteles y restaurantes en Cartagena.</p>
         <p class="text-xs opacity-70">Diseñado para la excelencia operativa.</p>
     </footer>
 

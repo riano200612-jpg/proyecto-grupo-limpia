@@ -520,18 +520,18 @@
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-12" style="background-color: #ffffff;">
-        <video autoplay muted loop playsinline preload="metadata" 
+    <header class="relative min-h-screen flex flex-col items-center justify-end overflow-hidden px-4 sm:px-6 md:px-12 pb-12 sm:pb-16 md:pb-20" style="background-color: #ffffff;">
+        <video autoplay muted loop playsinline preload="auto" 
                width="1920" height="1080"
                poster="assets/limpia-poster.jpg"
                aria-label="Video de fondo mostrando servicios de limpieza profesional"
                class="absolute inset-0 w-full h-full object-cover">
-            <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4">
+            <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4; codecs=&quot;avc1.42E01E&quot;">
             Tu navegador no soporta video HTML5.
         </video>
-        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(255,255,255,0.30), rgba(255,255,255,0.05), rgba(255,255,255,0.40));"></div>
+        <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(255,255,255,0.25), rgba(255,255,255,0), rgba(255,255,255,0.35));"></div>
         
-        <div class="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
+        <div class="relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center justify-end text-center">
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full">
                 <a href="#contacto" class="btn-premium px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white text-xs sm:text-sm font-semibold transition text-center whitespace-nowrap" style="background: var(--deep-blue)">
                     Solicitar cotización
@@ -711,7 +711,7 @@
             <div class="grid md:grid-cols-2 gap-8 reveal">
                 <div class="service-card p-4">
                     <div class="video-card group relative">
-                        <video id="video-estandar-1" muted loop playsinline preload="none" 
+                        <video id="video-estandar-1" muted loop playsinline preload="auto" 
                                width="600" height="300"
                                poster="assets/video-hogar-poster.jpg"
                                class="w-full h-full object-cover"
@@ -729,7 +729,7 @@
                 </div>
                 <div class="service-card p-4">
                     <div class="video-card group relative">
-                        <video id="video-estandar-2" muted loop playsinline preload="none" 
+                        <video id="video-estandar-2" muted loop playsinline preload="auto" 
                                width="600" height="300"
                                poster="assets/video-cocina-poster.jpg"
                                class="w-full h-full object-cover"
@@ -816,12 +816,12 @@
             </p>
 
             <div class="media-frame reveal group relative aspect-video max-w-4xl mx-auto overflow-hidden shadow-2xl">
-                <video id="main-comercial" muted loop playsinline preload="none" 
+                <video id="main-comercial" muted loop playsinline preload="auto" 
                        width="1920" height="1080"
                        poster="assets/video-corporativo-poster.jpg"
                        class="w-full h-full object-cover"
                        aria-label="Video promocional mostrando espacios limpios y profesionales">
-                    <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4">
+                    <source src="assets/imagenes/VIDEO_CORPORATIVO_PREMIUM_PARA.mp4" type="video/mp4; codecs=&quot;avc1.42E01E&quot;">
                     Tu navegador no soporta video HTML5.
                 </video>
 
@@ -1081,14 +1081,16 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const video = entry.target;
-                    video.load();
-                    video.play().catch(err => console.log('Video play prevented:', err));
+                    if (video.paused) {
+                        video.play().catch(err => console.log('Video autoplay prevented:', err));
+                    }
                     videoObserver.unobserve(video);
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.25 });
 
-        document.querySelectorAll('video[preload="none"]').forEach(video => {
+        // Observar solo videos con preload="auto" para autoplay
+        document.querySelectorAll('video[preload="auto"]').forEach(video => {
             videoObserver.observe(video);
         });
 
